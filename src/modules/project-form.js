@@ -20,6 +20,12 @@ const formBuild = () => {
 
         form.append(label, input, br);
     }
+    const button = document.createElement('button');
+    button.setAttribute('type', 'button');
+    button.setAttribute('id', 'create-project');
+    button.textContent = 'Create';
+
+    form.append(button);
     return form;
 }
 
