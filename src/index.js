@@ -1,8 +1,10 @@
 import './styles/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import form from './modules/project-form';
+import projectForm from './modules/project-form';
+import taskForm from './modules/task-form';
 
-form();
+projectForm();
+taskForm();
 
 
 
