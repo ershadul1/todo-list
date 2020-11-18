@@ -1,0 +1,30 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "A todo list app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ershadul1/todo-list.git"
+  },
+  "author": "Ershadul and Aldana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ershadul1/todo-list/issues"
+  },
+  "homepage": "https://github.com/ershadul1/todo-list#readme",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.5.1",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  }
+}
