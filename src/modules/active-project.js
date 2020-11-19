@@ -1,8 +1,9 @@
 import taskForm from './forms/task-form';
-import createTask from '../modules/objects/create-new-task';
+import removeElement from './helpers/remove-element'
 import projectList from './objects/project-list';
 
 const activeProject = (index) => {
+  removeElement('inner-container');
 
   taskForm(index);
 

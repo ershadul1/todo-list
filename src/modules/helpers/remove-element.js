@@ -1,6 +1,9 @@
 const removeCurrentElement = (id) => {
-    const nodesToRemove = document.getElementById(id).childNodes;
-    nodesToRemove.forEach(node => node.remove());
+  const nodesToRemove = document.getElementById(id);
+        
+  while (nodesToRemove.lastElementChild) {
+    nodesToRemove.removeChild(nodesToRemove.lastElementChild);
+  }
 };
 
 export default removeCurrentElement;

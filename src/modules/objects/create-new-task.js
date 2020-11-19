@@ -4,7 +4,7 @@ import projectList from './project-list';
 import removeElements from '../helpers/remove-element';
 
 const createTask = (index) => {
-  removeElements('inner-container');
+  
   let project = projectList[index];
 
   let title = document.getElementById('task-title').value;
