@@ -1,7 +1,7 @@
 import Project from './project-class'
 import projectList from './project-list'
-import removeCurrentElement from '../helpers/remove-element';
-import sideBar from './sidebar';
+import removeCurrentElement from '../../helpers/remove-element';
+import { sidebarLinks } from '../layout/sidebar';
 
 const projects = () => {
   let title = document.getElementById('project-title').value;
@@ -10,11 +10,13 @@ const projects = () => {
 
   let newProject = new Project(title, description, dueDate);
   projectList.push(newProject);
-  removeCurrentElement('link-container');
+  removeCurrentElement('side-bar');
 
   const container = document.querySelector('.side-bar');
 
-  container.appendChild(sideBar());
+  container.appendChild(sidebarLinks());
+
+  console.log(projectList);
 }
 
 export default projects;

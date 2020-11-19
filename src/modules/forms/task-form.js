@@ -1,4 +1,6 @@
-const formBuild = () => {
+import createTask from "../objects/create-new-task";
+
+const form = (index) => {
   const form = document.createElement('form');
   form.setAttribute('id', 'task-form');
   form.classList.add('form');
@@ -48,15 +50,16 @@ const formBuild = () => {
   button.setAttribute('type', 'button');
   button.setAttribute('id', 'create-task');
   button.textContent = 'Create';
+  button.onclick = () => {
+    createTask(index);
+  }
 
   form.append(button);
-  return form;
+
+  const container = document.getElementById('inner-container');
+
+  container.appendChild(form);
 };
 
-const form = () => {
-  const container = document.getElementById('container');
-
-  container.appendChild(formBuild());
-};
 
 export default form;

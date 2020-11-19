@@ -1,10 +1,10 @@
 import './styles/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import navbar from './modules/navbar';
-import sideBar from './modules/sidebar';
-import projectForm from './modules/project-form';
-import taskForm from './modules/task-form';
-import projectList from './modules/project-list'
+import navbar from './modules/layout/navbar';
+import { sideBar } from './modules/layout/sidebar';
+import projectForm from './modules/forms/project-form';
+import taskForm from './modules/forms/task-form';
+import projectList from './modules/objects/project-list'
 
 navbar();
 

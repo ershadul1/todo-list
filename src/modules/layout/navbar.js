@@ -1,5 +1,5 @@
-import projectForm from './project-form';
-import removeCurrentElement from '../helpers/remove-element';
+import projectForm from '../forms/project-form';
+import removeCurrentElement from '../../helpers/remove-element';
 
 const navbar = () => {
   const container = document.querySelector('#container');
