@@ -11,14 +11,13 @@ class Project {
   }
 
   removeTask(task) {
-    let index = this.taskList.indexOf(task);
+    const index = this.taskList.indexOf(task);
     this.taskList.splice(index, 1);
   }
 
   get readTaskList() {
     return this.taskList;
   }
-
 }
 
 export default Project;
