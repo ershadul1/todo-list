@@ -1,3 +1,5 @@
+import projects from './create-new-project'
+
 const formBuild = () => {
   const form = document.createElement('form');
   form.setAttribute('id', 'project-form');
@@ -24,6 +26,7 @@ const formBuild = () => {
   button.setAttribute('type', 'button');
   button.setAttribute('id', 'create-project');
   button.textContent = 'Create';
+  button.addEventListener('click', projects);
 
   form.append(button);
   return form;
