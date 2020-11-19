@@ -16,6 +16,7 @@ secondaryContainer.classList.add('d-flex');
 
 const innerContainer = document.createElement('div');
 innerContainer.setAttribute('id', 'inner-container');
+innerContainer.classList.add('w-100', 'd-flex', 'flex-column', 'align-items-center', 'mt-5')
 
 secondaryContainer.append(sideBar(), innerContainer);
 mainContainer.appendChild(secondaryContainer);
