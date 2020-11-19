@@ -99,7 +99,49 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/styles.css */ \"./src/styles/styles.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _modules_project_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/project-form */ \"./src/modules/project-form.js\");\n/* harmony import */ var _modules_task_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/task-form */ \"./src/modules/task-form.js\");\n\n \n\n\n\n(0,_modules_project_form__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_task_form__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n\n\n\n\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/styles.css */ \"./src/styles/styles.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/navbar */ \"./src/modules/navbar.js\");\n/* harmony import */ var _modules_project_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/project-form */ \"./src/modules/project-form.js\");\n/* harmony import */ var _modules_task_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/task-form */ \"./src/modules/task-form.js\");\n/* harmony import */ var _modules_project_list__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/project-list */ \"./src/modules/project-list.js\");\n\n\n\n\n\n\n\n\n(0,_modules_navbar__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_project_form__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_modules_task_form__WEBPACK_IMPORTED_MODULE_4__.default)();\n\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/create-new-project.js":
+/*!*******************************************!*\
+  !*** ./src/modules/create-new-project.js ***!
+  \*******************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _project_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project-class */ \"./src/modules/project-class.js\");\n/* harmony import */ var _project_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project-list */ \"./src/modules/project-list.js\");\n\n\n\nconst projects = () => {\n  let title = document.getElementById('project-title').value;\n  let description = document.getElementById('project-description').value;\n  let dueDate = document.getElementById('project-dueDate').value;\n\n  let newProject = new _project_class__WEBPACK_IMPORTED_MODULE_0__.default(title, description, dueDate);\n  _project_list__WEBPACK_IMPORTED_MODULE_1__.default.push(newProject);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (projects);\n\n//# sourceURL=webpack://todo-list/./src/modules/create-new-project.js?");
+
+/***/ }),
+
+/***/ "./src/modules/navbar.js":
+/*!*******************************!*\
+  !*** ./src/modules/navbar.js ***!
+  \*******************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst navbar = () => {\n  const container = document.querySelector('#container');\n  const nav = document.createElement('nav');\n  const newProjectBtn = document.createElement('button');\n  newProjectBtn.setAttribute('type', 'button');\n  newProjectBtn.textContent = 'Create new project';\n\n  nav.appendChild(newProjectBtn);\n  container.appendChild(nav);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navbar);\n\n//# sourceURL=webpack://todo-list/./src/modules/navbar.js?");
+
+/***/ }),
+
+/***/ "./src/modules/project-class.js":
+/*!**************************************!*\
+  !*** ./src/modules/project-class.js ***!
+  \**************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nclass Project {\n  constructor(title, description, dueDate) {\n    this.title = title;\n    this.description = description;\n    this.dueDate = dueDate;\n    this.taskList = [];\n  }\n\n  addTask(task) {\n    this.taskList.push(task);\n  }\n\n  removeTask(task) {\n    const index = this.taskList.indexOf(task);\n    this.taskList.splice(index, 1);\n  }\n\n  get readTaskList() {\n    return this.taskList;\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Project);\n\n//# sourceURL=webpack://todo-list/./src/modules/project-class.js?");
 
 /***/ }),
 
@@ -110,10 +152,24 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst formBuild = () => {\n    const form = document.createElement('form');\n    form.setAttribute('id', 'project-form');\n    form.classList.add('form');\n\n    let labelFor = [\"title\", \"description\", \"dueDate\"];\n    let inputType = [\"text\", \"text\", \"date\"];\n\n    for (let i = 0; i < labelFor.length; i += 1) {\n        const label = document.createElement('label');\n        label.setAttribute('for', labelFor[i]);\n        label.textContent += `Project ${labelFor[i]}`;\n        label.classList.add('label');\n\n        const input = document.createElement('input');\n        input.setAttribute('type', inputType[i]);\n        input.setAttribute('id', `project-${labelFor[i]}`);\n\n        const br = document.createElement('br');\n\n        form.append(label, input, br);\n    }\n    const button = document.createElement('button');\n    button.setAttribute('type', 'button');\n    button.setAttribute('id', 'create-project');\n    button.textContent = 'Create';\n\n    form.append(button);\n    return form;\n}\n\nconst form = () => {\n    const container = document.getElementById('container');\n\n    container.appendChild(formBuild());\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);\n\n\n\n//# sourceURL=webpack://todo-list/./src/modules/project-form.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _create_new_project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create-new-project */ \"./src/modules/create-new-project.js\");\n\n\nconst formBuild = () => {\n  const form = document.createElement('form');\n  form.setAttribute('id', 'project-form');\n  form.classList.add('form');\n\n  const labelFor = ['title', 'description', 'dueDate'];\n  const inputType = ['text', 'text', 'date'];\n\n  for (let i = 0; i < labelFor.length; i += 1) {\n    const label = document.createElement('label');\n    label.setAttribute('for', labelFor[i]);\n    label.textContent += `Project ${labelFor[i]}`;\n    label.classList.add('label');\n\n    const input = document.createElement('input');\n    input.setAttribute('type', inputType[i]);\n    input.setAttribute('id', `project-${labelFor[i]}`);\n\n    const br = document.createElement('br');\n\n    form.append(label, input, br);\n  }\n  const button = document.createElement('button');\n  button.setAttribute('type', 'button');\n  button.setAttribute('id', 'create-project');\n  button.textContent = 'Create';\n  button.addEventListener('click', _create_new_project__WEBPACK_IMPORTED_MODULE_0__.default);\n\n  form.append(button);\n  return form;\n};\n\nconst form = () => {\n  const container = document.getElementById('container');\n\n  container.appendChild(formBuild());\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);\n\n\n//# sourceURL=webpack://todo-list/./src/modules/project-form.js?");
+
+/***/ }),
+
+/***/ "./src/modules/project-list.js":
+/*!*************************************!*\
+  !*** ./src/modules/project-list.js ***!
+  \*************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _project_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project-class */ \"./src/modules/project-class.js\");\n\n\nlet defaultProject = new _project_class__WEBPACK_IMPORTED_MODULE_0__.default('Project-1', 'Default project', 'Not specified');\n\nlet projectList = [defaultProject];\nconsole.log(projectList);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (projectList);\n\n\n\n//# sourceURL=webpack://todo-list/./src/modules/project-list.js?");
 
 /***/ }),
 
@@ -127,7 +183,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst formBuild = () => {\n    const form = document.createElement('form');\n    form.setAttribute('id', 'task-form');\n    form.classList.add('form');\n\n    let labelFor = [\"title\", \"description\", \"dueDate\", \"priority\", \"notes\"];\n    let inputType = [\"text\", \"text\", \"date\", \"text\"];\n\n    for (let i = 0; i < labelFor.length; i += 1) {\n        if( i === 3) {\n          let radioLabel = [\"high\", \"medium\", \"low\"];\n\n          const text = document.createElement('p');\n          text.textContent += 'Priority';\n          \n          form.append(text);\n          for (let j = 0; j < radioLabel.length; j += 1) {\n              const label = document.createElement('label');\n              label.setAttribute('for', radioLabel[j]);\n              label.textContent += radioLabel[j];\n\n              const input = document.createElement('input');\n              input.setAttribute('type', 'radio');\n              input.setAttribute('id', `${radioLabel[j]}-radio`);\n              input.setAttribute('name', 'priority');\n              input.setAttribute('value', radioLabel[j]);\n\n              const br = document.createElement('br');\n\n              form.append(input, label, br);\n          }\n        } else {\n            const label = document.createElement('label');\n            label.setAttribute('for', labelFor[i]);\n            label.textContent += `Task ${labelFor[i]}`;\n            label.classList.add('label');\n    \n            const input = document.createElement('input');\n            input.setAttribute('type', inputType[i]);\n            input.setAttribute('id', `task-${labelFor[i]}`);\n    \n            const br = document.createElement('br');\n    \n            form.append(label, input, br);\n        }\n    }\n    const button = document.createElement('button');\n    button.setAttribute('type', 'button');\n    button.setAttribute('id', 'create-task');\n    button.textContent = 'Create';\n\n    form.append(button);\n    return form;\n}\n\nconst form = () => {\n    const container = document.getElementById('container');\n\n    container.appendChild(formBuild());\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);\n\n//# sourceURL=webpack://todo-list/./src/modules/task-form.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst formBuild = () => {\n  const form = document.createElement('form');\n  form.setAttribute('id', 'task-form');\n  form.classList.add('form');\n\n  const labelFor = ['title', 'description', 'dueDate', 'priority', 'notes'];\n  const inputType = ['text', 'text', 'date', 'text'];\n\n  for (let i = 0; i < labelFor.length; i += 1) {\n    if (i === 3) {\n      const radioLabel = ['high', 'medium', 'low'];\n\n      const text = document.createElement('p');\n      text.textContent += 'Priority';\n\n      form.append(text);\n      for (let j = 0; j < radioLabel.length; j += 1) {\n        const label = document.createElement('label');\n        label.setAttribute('for', radioLabel[j]);\n        label.textContent += radioLabel[j];\n\n        const input = document.createElement('input');\n        input.setAttribute('type', 'radio');\n        input.setAttribute('id', `${radioLabel[j]}-radio`);\n        input.setAttribute('name', 'priority');\n        input.setAttribute('value', radioLabel[j]);\n\n        const br = document.createElement('br');\n\n        form.append(input, label, br);\n      }\n    } else {\n      const label = document.createElement('label');\n      label.setAttribute('for', labelFor[i]);\n      label.textContent += `Task ${labelFor[i]}`;\n      label.classList.add('label');\n\n      const input = document.createElement('input');\n      input.setAttribute('type', inputType[i]);\n      input.setAttribute('id', `task-${labelFor[i]}`);\n\n      const br = document.createElement('br');\n\n      form.append(label, input, br);\n    }\n  }\n  const button = document.createElement('button');\n  button.setAttribute('type', 'button');\n  button.setAttribute('id', 'create-task');\n  button.textContent = 'Create';\n\n  form.append(button);\n  return form;\n};\n\nconst form = () => {\n  const container = document.getElementById('container');\n\n  container.appendChild(formBuild());\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);\n\n//# sourceURL=webpack://todo-list/./src/modules/task-form.js?");
 
 /***/ })
 
