@@ -34,7 +34,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_exports__, __webpack_require__.r, module.id, __webpack_require__.d, __webpack_require__.*, module */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo-list/./src/styles/styles.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n    margin: 0;\\n    padding: 0;\\n    box-sizing: border-box;\\n}\\n\\nnav {\\n    height: 3.5vw;\\n    background-color: #2766C2;\\n}\\n\\n.side-bar {\\n    width: 15vw;\\n    height: 100vh;\\n    background-color: #2b7def;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo-list/./src/styles/styles.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -90,6 +90,20 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
+/***/ "./src/helpers/inner-container.js":
+/*!****************************************!*\
+  !*** ./src/helpers/inner-container.js ***!
+  \****************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst removeCurrentElement = () => {\n    const nodesToRemove = document.querySelector('#inner-container').childNodes;\n    nodesToRemove.forEach(node => node.remove());\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (removeCurrentElement);\n\n//# sourceURL=webpack://todo-list/./src/helpers/inner-container.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -99,7 +113,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/styles.css */ \"./src/styles/styles.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/navbar */ \"./src/modules/navbar.js\");\n/* harmony import */ var _modules_project_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/project-form */ \"./src/modules/project-form.js\");\n/* harmony import */ var _modules_task_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/task-form */ \"./src/modules/task-form.js\");\n/* harmony import */ var _modules_project_list__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/project-list */ \"./src/modules/project-list.js\");\n\n\n\n\n\n\n\n\n(0,_modules_navbar__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_project_form__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_modules_task_form__WEBPACK_IMPORTED_MODULE_4__.default)();\n\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/styles.css */ \"./src/styles/styles.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/navbar */ \"./src/modules/navbar.js\");\n/* harmony import */ var _modules_sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/sidebar */ \"./src/modules/sidebar.js\");\n/* harmony import */ var _modules_project_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/project-form */ \"./src/modules/project-form.js\");\n/* harmony import */ var _modules_task_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/task-form */ \"./src/modules/task-form.js\");\n/* harmony import */ var _modules_project_list__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/project-list */ \"./src/modules/project-list.js\");\n\n\n\n\n\n\n\n\n(0,_modules_navbar__WEBPACK_IMPORTED_MODULE_2__.default)();\n\nconst mainContainer = document.getElementById('container');\n\nconst secondaryContainer = document.createElement('div');\nsecondaryContainer.setAttribute('id', 'secondary-container');\nsecondaryContainer.classList.add('d-flex');\n\nconst innerContainer = document.createElement('div');\ninnerContainer.setAttribute('id', 'inner-container');\n\nsecondaryContainer.append((0,_modules_sidebar__WEBPACK_IMPORTED_MODULE_3__.default)(), innerContainer);\nmainContainer.appendChild(secondaryContainer);\n\n\n\n//projectForm();\n//taskForm();\n\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
 
 /***/ }),
 
@@ -124,10 +138,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst navbar = () => {\n  const container = document.querySelector('#container');\n  const nav = document.createElement('nav');\n  const newProjectBtn = document.createElement('button');\n  newProjectBtn.setAttribute('type', 'button');\n  newProjectBtn.textContent = 'Create new project';\n\n  nav.appendChild(newProjectBtn);\n  container.appendChild(nav);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navbar);\n\n//# sourceURL=webpack://todo-list/./src/modules/navbar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _project_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project-form */ \"./src/modules/project-form.js\");\n/* harmony import */ var _helpers_inner_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helpers/inner-container */ \"./src/helpers/inner-container.js\");\n\n\n\nconst navbar = () => {\n  const container = document.querySelector('#container');\n\n  const nav = document.createElement('nav');\n  nav.classList.add('d-flex', 'justify-content-center', 'align-items-center');\n\n  const newProjectBtn = document.createElement('button');\n  newProjectBtn.classList.add('btn', 'btn-light');\n  newProjectBtn.setAttribute('type', 'button');\n  newProjectBtn.textContent = 'Create new project';\n  newProjectBtn.addEventListener('click', displayForm);\n\n  nav.appendChild(newProjectBtn);\n  container.appendChild(nav);\n}\n\nconst displayForm = () => {\n  ;(0,_helpers_inner_container__WEBPACK_IMPORTED_MODULE_1__.default)();\n  const container = document.getElementById('inner-container');\n\n  container.appendChild((0,_project_form__WEBPACK_IMPORTED_MODULE_0__.default)());\n}\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navbar);\n\n//# sourceURL=webpack://todo-list/./src/modules/navbar.js?");
 
 /***/ }),
 
@@ -155,7 +169,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _create_new_project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create-new-project */ \"./src/modules/create-new-project.js\");\n\n\nconst formBuild = () => {\n  const form = document.createElement('form');\n  form.setAttribute('id', 'project-form');\n  form.classList.add('form');\n\n  const labelFor = ['title', 'description', 'dueDate'];\n  const inputType = ['text', 'text', 'date'];\n\n  for (let i = 0; i < labelFor.length; i += 1) {\n    const label = document.createElement('label');\n    label.setAttribute('for', labelFor[i]);\n    label.textContent += `Project ${labelFor[i]}`;\n    label.classList.add('label');\n\n    const input = document.createElement('input');\n    input.setAttribute('type', inputType[i]);\n    input.setAttribute('id', `project-${labelFor[i]}`);\n\n    const br = document.createElement('br');\n\n    form.append(label, input, br);\n  }\n  const button = document.createElement('button');\n  button.setAttribute('type', 'button');\n  button.setAttribute('id', 'create-project');\n  button.textContent = 'Create';\n  button.addEventListener('click', _create_new_project__WEBPACK_IMPORTED_MODULE_0__.default);\n\n  form.append(button);\n  return form;\n};\n\nconst form = () => {\n  const container = document.getElementById('container');\n\n  container.appendChild(formBuild());\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);\n\n\n//# sourceURL=webpack://todo-list/./src/modules/project-form.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _create_new_project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create-new-project */ \"./src/modules/create-new-project.js\");\n\n\nconst formBuild = () => {\n  const form = document.createElement('form');\n  form.setAttribute('id', 'project-form');\n  form.classList.add('form');\n\n  const labelFor = ['title', 'description', 'dueDate'];\n  const inputType = ['text', 'text', 'date'];\n\n  for (let i = 0; i < labelFor.length; i += 1) {\n    const label = document.createElement('label');\n    label.setAttribute('for', labelFor[i]);\n    label.textContent += `Project ${labelFor[i]}`;\n    label.classList.add('label');\n\n    const input = document.createElement('input');\n    input.setAttribute('type', inputType[i]);\n    input.setAttribute('id', `project-${labelFor[i]}`);\n\n    const br = document.createElement('br');\n\n    form.append(label, input, br);\n  }\n  const button = document.createElement('button');\n  button.setAttribute('type', 'button');\n  button.setAttribute('id', 'create-project');\n  button.textContent = 'Create';\n  button.addEventListener('click', _create_new_project__WEBPACK_IMPORTED_MODULE_0__.default);\n\n  form.append(button);\n  return form;\n};\n\nconst form = () => {\n  const container = document.getElementById('inner-container');\n\n  container.appendChild(formBuild());\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form);\n\n\n//# sourceURL=webpack://todo-list/./src/modules/project-form.js?");
 
 /***/ }),
 
@@ -170,6 +184,20 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _project_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project-class */ \"./src/modules/project-class.js\");\n\n\nlet defaultProject = new _project_class__WEBPACK_IMPORTED_MODULE_0__.default('Project-1', 'Default project', 'Not specified');\n\nlet projectList = [defaultProject];\nconsole.log(projectList);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (projectList);\n\n\n\n//# sourceURL=webpack://todo-list/./src/modules/project-list.js?");
+
+/***/ }),
+
+/***/ "./src/modules/sidebar.js":
+/*!********************************!*\
+  !*** ./src/modules/sidebar.js ***!
+  \********************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nconst sideBar = () => {\n    const sideNavigation = document.createElement('div');\n    sideNavigation.classList.add('side-bar');\n\n    return sideNavigation;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sideBar);\n\n//# sourceURL=webpack://todo-list/./src/modules/sidebar.js?");
 
 /***/ }),
 

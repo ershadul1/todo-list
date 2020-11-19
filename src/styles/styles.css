@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 3.5vw;
+    background-color: #2766C2;
+}
+
+.side-bar {
+    width: 15vw;
+    height: 100vh;
+    background-color: #2b7def;
+}
