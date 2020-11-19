@@ -34,7 +34,7 @@ const formBuild = () => {
 
 const form = () => {
   const container = document.getElementById('inner-container');
-
+  
   container.appendChild(formBuild());
 };
 
