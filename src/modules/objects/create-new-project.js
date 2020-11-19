@@ -1,6 +1,6 @@
 import Project from './project-class'
 import projectList from './project-list'
-import removeCurrentElement from '../../helpers/remove-element';
+import removeCurrentElement from '../helpers/remove-element';
 import { sidebarLinks } from '../layout/sidebar';
 
 const projects = () => {
