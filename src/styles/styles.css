@@ -5,12 +5,28 @@
 }
 
 nav {
-    height: 3.5vw;
+    height: 5vh;
     background-color: #2766C2;
 }
 
 .side-bar {
-    width: 15vw;
-    height: 100vh;
+    width: 20vw;
+    min-height: 95vh;
     background-color: #2b7def;
+}
+
+.link {
+    display: block;
+    width: 80%;
+    margin-top: 3rem;
+}
+
+.link:hover {
+    text-decoration: none;
+}
+
+.orange {
+    color: white;
+    background-color: orange;
+    border-color: orange;
 }

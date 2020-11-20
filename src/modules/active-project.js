@@ -8,11 +8,15 @@ const activeProject = (index) => {
 
   const innerDiv = document.getElementById('inner-container');
 
+  const projectTitle = document.createElement('h1');
+  projectTitle.textContent += projectList[index].title;
+  projectTitle.classList.add('mb-3');
+
   const showFormBtn = document.createElement('button');
   showFormBtn.textContent = 'Show task form';
   showFormBtn.classList.add('btn', 'btn-primary');
 
-  innerDiv.appendChild(showFormBtn);
+  innerDiv.append(projectTitle, showFormBtn);
   taskForm(index);
   const newTaskForm = document.getElementById('task-form');
   newTaskForm.style.display = 'none';
@@ -47,11 +51,23 @@ const activeProject = (index) => {
     taskDescription.textContent += task.description;
 
     const taskPriority = document.createElement('p');
-    taskPriority.classList.add('btn', 'btn-light');
+    if (task.priority === 'high') {
+      taskPriority.classList.add('btn', 'btn-sm', 'btn-danger');
+    } else if (task.priority === 'medium') {
+      taskPriority.classList.add('btn', 'btn-sm', 'btn-warning');
+    } else {
+      taskPriority.classList.add('btn', 'btn-sm', 'btn-info');
+    }
+
     taskPriority.textContent += task.priority;
 
     const dueDate = document.createElement('p');
     dueDate.textContent += task.dueDate;
+
+    const btnContainer = document.createElement('div');
+    btnContainer.classList.add('d-flex', 'justify-content-between');
+
+    const btnSpan = document.createElement('span');
 
     const statusButton = document.createElement('button');
     statusButton.setAttribute('type', 'button');
@@ -61,17 +77,17 @@ const activeProject = (index) => {
       statusButton.classList.add('btn-success');
     } else {
       statusButton.textContent = 'Incomplete';
-      statusButton.classList.add('btn-danger');
+      statusButton.classList.add('btn-dark');
     }
     statusButton.onclick = () => {
       if (task.completed) {
         statusButton.textContent = 'Incomplete';
         statusButton.classList.remove('btn-success');
-        statusButton.classList.add('btn-danger');
+        statusButton.classList.add('btn-dark');
         task.completed = false;
       } else {
         statusButton.textContent = 'Completed';
-        statusButton.classList.remove('btn-danger');
+        statusButton.classList.remove('btn-dark');
         statusButton.classList.add('btn-success');
         task.completed = true;
       }
@@ -80,7 +96,7 @@ const activeProject = (index) => {
 
     const editButton = document.createElement('button');
     editButton.setAttribute('type', 'button');
-    editButton.classList.add('btn', 'btn-primary', 'mx-2');
+    editButton.classList.add('btn', 'btn-outline-primary', 'mx-2');
     editButton.textContent = 'Edit';
     editButton.onclick = () => {
       removeElement('inner-container');
@@ -89,7 +105,7 @@ const activeProject = (index) => {
 
     const deleteButton = document.createElement('button');
     deleteButton.setAttribute('type', 'button');
-    deleteButton.classList.add('btn', 'btn-primary');
+    deleteButton.classList.add('btn', 'btn-outline-secondary');
     deleteButton.textContent = 'Delete';
     deleteButton.onclick = () => {
       const project = projectList[index];
@@ -97,7 +113,9 @@ const activeProject = (index) => {
       activeProject(index);
     }
 
-    taskBody.append(taskDescription, taskPriority, dueDate, statusButton, editButton, deleteButton);
+    btnSpan.append(editButton, deleteButton);
+    btnContainer.append(statusButton, btnSpan);
+    taskBody.append(taskDescription, taskPriority, dueDate, btnContainer);
     taskCont.append(taskHeader, taskBody);
     tasksContainer.appendChild(taskCont);
   });
