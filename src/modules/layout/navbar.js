@@ -1,6 +1,11 @@
 import projectForm from '../forms/project-form';
 import removeCurrentElement from '../helpers/remove-element';
 
+const displayForm = () => {
+  removeCurrentElement('inner-container');
+  projectForm();
+};
+
 const navbar = () => {
   const container = document.querySelector('#container');
 
@@ -17,9 +22,5 @@ const navbar = () => {
   container.appendChild(nav);
 };
 
-const displayForm = () => {
-  removeCurrentElement('inner-container');
-  projectForm();
-};
 
 export default navbar;

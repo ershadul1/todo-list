@@ -1,10 +1,11 @@
-import projectList from '../objects/project-list';
+import getProjectList from '../objects/project-list';
 import activeProject from '../active-project';
 
 const sidebarLinks = () => {
   const linkContainer = document.createElement('div');
   linkContainer.setAttribute('id', 'link-container');
   linkContainer.classList.add('d-flex', 'flex-column', 'align-items-center');
+  const projectList = getProjectList();
 
   projectList.forEach((project, index) => {
     const link = document.createElement('a');

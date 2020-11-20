@@ -1,4 +1,4 @@
-import editTask from "../objects/edit-task";
+import editTask from '../objects/edit-task';
 
 const editTaskForm = (task, index) => {
   const formContainer = document.createElement('div');
@@ -34,9 +34,9 @@ const editTaskForm = (task, index) => {
         input.setAttribute('name', 'priority');
         input.setAttribute('value', radioLabel[j]);
 
-        let priority = task.priority;
-        
-        if(radioLabel[j] === priority) {
+        const { priority } = task;
+
+        if (radioLabel[j] === priority) {
           input.checked = true;
         }
 
@@ -54,7 +54,7 @@ const editTaskForm = (task, index) => {
       const input = document.createElement('input');
       input.setAttribute('type', inputType[i]);
       input.setAttribute('id', `task-${labelFor[i]}`);
-      input.setAttribute('placeholder',`${task[labelFor[i]]}`);
+      input.setAttribute('placeholder', `${task[labelFor[i]]}`);
       input.classList.add('form-control');
 
       const br = document.createElement('br');
@@ -78,7 +78,6 @@ const editTaskForm = (task, index) => {
 
   formContainer.appendChild(form);
   container.appendChild(formContainer);
-  console.log('Inside');
-}
+};
 
 export default editTaskForm;

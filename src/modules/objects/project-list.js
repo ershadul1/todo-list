@@ -1,8 +1,6 @@
-import Project from './project-class';
+import { loadFromLocalStorage } from '../helpers/local-storage';
 
-const defaultProject = new Project('Project-1', 'Default project', 'Not specified');
 
-const projectList = [defaultProject];
-console.log(projectList);
+const getProjectList = () => loadFromLocalStorage();
 
-export default projectList;
+export default getProjectList;

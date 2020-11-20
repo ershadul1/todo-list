@@ -2,10 +2,9 @@ import './styles/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import navbar from './modules/layout/navbar';
 import { sideBar } from './modules/layout/sidebar';
-import projectForm from './modules/forms/project-form';
-import taskForm from './modules/forms/task-form';
-import projectList from './modules/objects/project-list';
+import { initializeLocalStorage } from './modules/helpers/local-storage';
 
+initializeLocalStorage();
 navbar();
 
 const mainContainer = document.getElementById('container');

@@ -1,9 +1,10 @@
 import Task from './task-class';
 import activeProject from '../active-project';
-import projectList from './project-list';
-import removeElements from '../helpers/remove-element';
+import getProjectList from './project-list';
+import { saveToLocalStorage } from '../helpers/local-storage';
 
 const createTask = (index) => {
+  const projectList = getProjectList();
   const project = projectList[index];
 
   const title = document.getElementById('task-title').value;
@@ -21,6 +22,7 @@ const createTask = (index) => {
 
   const newtask = new Task(title, description, dueDate, priority, notes);
   project.addTask(newtask);
+  saveToLocalStorage(projectList);
 
   activeProject(index);
 };

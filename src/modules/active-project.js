@@ -1,11 +1,13 @@
 import taskForm from './forms/task-form';
 import removeElement from './helpers/remove-element';
-import projectList from './objects/project-list';
+import getProjectList from './objects/project-list';
 import editTaskForm from './forms/edit-task-form';
+import { saveToLocalStorage } from './helpers/local-storage';
 
 const activeProject = (index) => {
   removeElement('inner-container');
 
+  const projectList = getProjectList();
   const innerDiv = document.getElementById('inner-container');
 
   const projectTitle = document.createElement('h1');
@@ -91,7 +93,7 @@ const activeProject = (index) => {
         statusButton.classList.add('btn-success');
         task.completed = true;
       }
-      console.log(task.completed);
+      saveToLocalStorage(projectList);
     };
 
     const editButton = document.createElement('button');
@@ -101,7 +103,7 @@ const activeProject = (index) => {
     editButton.onclick = () => {
       removeElement('inner-container');
       editTaskForm(task, index);
-    }
+    };
 
     const deleteButton = document.createElement('button');
     deleteButton.setAttribute('type', 'button');
@@ -110,8 +112,9 @@ const activeProject = (index) => {
     deleteButton.onclick = () => {
       const project = projectList[index];
       project.removeTask(task);
+      saveToLocalStorage(projectList);
       activeProject(index);
-    }
+    };
 
     btnSpan.append(editButton, deleteButton);
     btnContainer.append(statusButton, btnSpan);
