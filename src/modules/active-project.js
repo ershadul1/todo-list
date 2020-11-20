@@ -1,18 +1,36 @@
 import taskForm from './forms/task-form';
-import removeElement from './helpers/remove-element'
+import removeElement from './helpers/remove-element';
 import projectList from './objects/project-list';
 
 const activeProject = (index) => {
   removeElement('inner-container');
 
-  taskForm(index);
-
   const innerDiv = document.getElementById('inner-container');
+
+  const showFormBtn = document.createElement('button');
+  showFormBtn.textContent = 'Show task form';
+  showFormBtn.classList.add('btn', 'btn-primary');
+
+  innerDiv.appendChild(showFormBtn);
+  taskForm(index);
+  const newTaskForm = document.getElementById('task-form');
+  newTaskForm.style.display = 'none';
+
+  showFormBtn.onclick = () => {
+    if (newTaskForm.style.display === 'block') {
+      showFormBtn.textContent = 'Show task form';
+      newTaskForm.style.display = 'none';
+    } else {
+      showFormBtn.textContent = 'Hide task form';
+      newTaskForm.style.display = 'block';
+    }
+  };
+
 
   const tasksContainer = document.createElement('div');
   tasksContainer.classList.add('w-50', 'mt-5');
 
-  const currentProjectTasks= projectList[index].readTaskList;
+  const currentProjectTasks = projectList[index].readTaskList;
 
   currentProjectTasks.forEach(task => {
     const taskCont = document.createElement('div');
@@ -37,15 +55,36 @@ const activeProject = (index) => {
 
     const statusButton = document.createElement('button');
     statusButton.setAttribute('type', 'button');
-    statusButton.classList.add('btn', 'btn-danger');
-    statusButton.textContent += 'Incomplete'
+    statusButton.classList.add('btn');
+    if (task.completed) {
+      statusButton.textContent = 'Completed';
+      statusButton.classList.add('btn-success');
+    } else {
+      statusButton.textContent = 'Incomplete';
+      statusButton.classList.add('btn-danger');
+    }
+    statusButton.onclick = () => {
+      if (task.completed) {
+        statusButton.textContent = 'Incomplete';
+        statusButton.classList.remove('btn-success');
+        statusButton.classList.add('btn-danger');
+        task.completed = false;
+      } else {
+        statusButton.textContent = 'Completed';
+        statusButton.classList.remove('btn-danger');
+        statusButton.classList.add('btn-success');
+        task.completed = true;
+      }
+      console.log(task.completed);
+    };
+
 
     taskBody.append(taskDescription, taskPriority, dueDate, statusButton);
     taskCont.append(taskHeader, taskBody);
     tasksContainer.appendChild(taskCont);
   });
-  
-  innerDiv.appendChild(tasksContainer);
-}
+
+  innerDiv.append(tasksContainer);
+};
 
 export default activeProject;

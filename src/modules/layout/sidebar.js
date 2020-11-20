@@ -6,27 +6,27 @@ const sidebarLinks = () => {
   linkContainer.setAttribute('id', 'link-container');
 
   projectList.forEach((project, index) => {
-      const link = document.createElement('a');
-      link.onclick = () => {
-        activeProject(index);
-      }
-      const linkTitle = document.createElement('p');
-      linkTitle.textContent += project.title;
+    const link = document.createElement('a');
+    link.onclick = () => {
+      activeProject(index);
+    };
+    const linkTitle = document.createElement('p');
+    linkTitle.textContent += project.title;
 
-      link.appendChild(linkTitle);
-      linkContainer.appendChild(link);
-  })
+    link.appendChild(linkTitle);
+    linkContainer.appendChild(link);
+  });
   return linkContainer;
-}
+};
 
 const sideBar = () => {
-    const sideNavigation = document.createElement('div');
-    sideNavigation.classList.add('side-bar');
-    sideNavigation.setAttribute('id', 'side-bar');
+  const sideNavigation = document.createElement('div');
+  sideNavigation.classList.add('side-bar');
+  sideNavigation.setAttribute('id', 'side-bar');
 
-    sideNavigation.appendChild(sidebarLinks());
+  sideNavigation.appendChild(sidebarLinks());
 
-    return sideNavigation;
-}
+  return sideNavigation;
+};
 
 export { sideBar, sidebarLinks };

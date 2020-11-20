@@ -1,4 +1,4 @@
-import projects from '../objects/create-new-project'
+import projects from '../objects/create-new-project';
 
 const form = () => {
   const formContainer = document.createElement('div');
@@ -39,7 +39,7 @@ const form = () => {
 
   form.append(button);
   const container = document.getElementById('inner-container');
-  
+
   container.appendChild(form);
 };
 

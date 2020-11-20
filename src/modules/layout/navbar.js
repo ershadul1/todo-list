@@ -15,11 +15,11 @@ const navbar = () => {
 
   nav.appendChild(newProjectBtn);
   container.appendChild(nav);
-}
+};
 
 const displayForm = () => {
   removeCurrentElement('inner-container');
   projectForm();
-}
+};
 
 export default navbar;

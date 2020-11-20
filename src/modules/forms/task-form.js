@@ -1,4 +1,4 @@
-import createTask from "../objects/create-new-task";
+import createTask from '../objects/create-new-task';
 
 const form = (index) => {
   const formContainer = document.createElement('div');
@@ -61,13 +61,13 @@ const form = (index) => {
   button.textContent = 'Create';
   button.onclick = () => {
     createTask(index);
-  }
+  };
   button.classList.add('btn', 'btn-primary');
 
   form.append(button);
 
   const container = document.getElementById('inner-container');
-   
+
   formContainer.appendChild(form);
   container.appendChild(formContainer);
 };
