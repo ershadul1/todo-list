@@ -27,7 +27,6 @@ const activeProject = (index) => {
     }
   };
 
-
   const tasksContainer = document.createElement('div');
   tasksContainer.classList.add('w-50', 'mt-5');
 
@@ -79,17 +78,26 @@ const activeProject = (index) => {
       console.log(task.completed);
     };
 
-
     const editButton = document.createElement('button');
     editButton.setAttribute('type', 'button');
     editButton.classList.add('btn', 'btn-primary', 'mx-2');
     editButton.textContent = 'Edit';
     editButton.onclick = () => {
       removeElement('inner-container');
-      editTaskForm(task);
+      editTaskForm(task, index);
     }
 
-    taskBody.append(taskDescription, taskPriority, dueDate, statusButton, editButton);
+    const deleteButton = document.createElement('button');
+    deleteButton.setAttribute('type', 'button');
+    deleteButton.classList.add('btn', 'btn-primary');
+    deleteButton.textContent = 'Delete';
+    deleteButton.onclick = () => {
+      const project = projectList[index];
+      project.removeTask(task);
+      activeProject(index);
+    }
+
+    taskBody.append(taskDescription, taskPriority, dueDate, statusButton, editButton, deleteButton);
     taskCont.append(taskHeader, taskBody);
     tasksContainer.appendChild(taskCont);
   });
