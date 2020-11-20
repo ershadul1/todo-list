@@ -1,6 +1,7 @@
 import taskForm from './forms/task-form';
 import removeElement from './helpers/remove-element';
 import projectList from './objects/project-list';
+import editTaskForm from './forms/edit-task-form';
 
 const activeProject = (index) => {
   removeElement('inner-container');
@@ -79,7 +80,16 @@ const activeProject = (index) => {
     };
 
 
-    taskBody.append(taskDescription, taskPriority, dueDate, statusButton);
+    const editButton = document.createElement('button');
+    editButton.setAttribute('type', 'button');
+    editButton.classList.add('btn', 'btn-primary', 'mx-2');
+    editButton.textContent = 'Edit';
+    editButton.onclick = () => {
+      removeElement('inner-container');
+      editTaskForm(task);
+    }
+
+    taskBody.append(taskDescription, taskPriority, dueDate, statusButton, editButton);
     taskCont.append(taskHeader, taskBody);
     tasksContainer.appendChild(taskCont);
   });
