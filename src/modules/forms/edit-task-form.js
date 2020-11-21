@@ -1,6 +1,6 @@
 import editTask from '../objects/edit-task';
 
-const editTaskForm = (task, index) => {
+const editTaskForm = (task, taskIndex, index) => {
   const formContainer = document.createElement('div');
   formContainer.classList.add('form-container', 'w-25');
 
@@ -54,7 +54,8 @@ const editTaskForm = (task, index) => {
       const input = document.createElement('input');
       input.setAttribute('type', inputType[i]);
       input.setAttribute('id', `task-${labelFor[i]}`);
-      input.setAttribute('placeholder', `${task[labelFor[i]]}`);
+
+      input.setAttribute('value', `${task[labelFor[i]]}`);
       input.classList.add('form-control');
 
       const br = document.createElement('br');
@@ -68,7 +69,7 @@ const editTaskForm = (task, index) => {
   button.setAttribute('id', 'create-task');
   button.textContent = 'Update';
   button.onclick = () => {
-    editTask(task, index);
+    editTask(taskIndex, index);
   };
   button.classList.add('btn', 'btn-primary');
 

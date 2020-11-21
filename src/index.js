@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import navbar from './modules/layout/navbar';
 import { sideBar } from './modules/layout/sidebar';
 import { initializeLocalStorage } from './modules/helpers/local-storage';
+import activeProject from './modules/active-project';
 
 initializeLocalStorage();
 navbar();
@@ -20,6 +21,6 @@ innerContainer.classList.add('w-100', 'd-flex', 'flex-column', 'align-items-cent
 secondaryContainer.append(sideBar(), innerContainer);
 mainContainer.appendChild(secondaryContainer);
 
+const currentProject = localStorage.getItem('currentProject') ? localStorage.getItem('currentProject') : 0;
 
-// projectForm();
-// taskForm();
+activeProject(currentProject);

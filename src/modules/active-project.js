@@ -7,6 +7,7 @@ import { saveToLocalStorage } from './helpers/local-storage';
 const activeProject = (index) => {
   removeElement('inner-container');
 
+  localStorage.setItem('currentProject', index);
   const projectList = getProjectList();
   const innerDiv = document.getElementById('inner-container');
 
@@ -38,7 +39,7 @@ const activeProject = (index) => {
 
   const currentProjectTasks = projectList[index].readTaskList;
 
-  currentProjectTasks.forEach(task => {
+  currentProjectTasks.forEach((task, taskIndex) => {
     const taskCont = document.createElement('div');
     taskCont.classList.add('card');
 
@@ -102,7 +103,7 @@ const activeProject = (index) => {
     editButton.textContent = 'Edit';
     editButton.onclick = () => {
       removeElement('inner-container');
-      editTaskForm(task, index);
+      editTaskForm(task, taskIndex, index);
     };
 
     const deleteButton = document.createElement('button');

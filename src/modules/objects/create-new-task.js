@@ -1,5 +1,4 @@
 import Task from './task-class';
-import activeProject from '../active-project';
 import getProjectList from './project-list';
 import { saveToLocalStorage } from '../helpers/local-storage';
 
@@ -24,7 +23,7 @@ const createTask = (index) => {
   project.addTask(newtask);
   saveToLocalStorage(projectList);
 
-  activeProject(index);
+  window.location.reload();
 };
 
 export default createTask;

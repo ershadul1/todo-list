@@ -1,8 +1,10 @@
-import activeProject from '../active-project';
 import { saveToLocalStorage } from '../helpers/local-storage';
 import getProjectList from './project-list';
 
-const editTask = (task, index) => {
+const editTask = (taskIndex, index) => {
+  const projectList = getProjectList();
+  const currentProject = projectList[index];
+  const taskList = currentProject.readTaskList;
   const title = document.getElementById('task-title').value;
   const description = document.getElementById('task-description').value;
   const dueDate = document.getElementById('task-dueDate').value;
@@ -16,14 +18,14 @@ const editTask = (task, index) => {
     }
   });
 
-  task.title = title;
-  task.description = description;
-  task.dueDate = dueDate;
-  task.priority = priority;
-  task.notes = notes;
-  const projectList = getProjectList();
+  taskList[taskIndex].title = title;
+  taskList[taskIndex].description = description;
+  taskList[taskIndex].dueDate = dueDate;
+  taskList[taskIndex].priority = priority;
+  taskList[taskIndex].notes = notes;
+
   saveToLocalStorage(projectList);
-  activeProject(index);
+  window.location.reload();
 };
 
 export default editTask;
