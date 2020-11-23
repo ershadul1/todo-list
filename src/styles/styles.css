@@ -1,32 +1,32 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 nav {
-    height: 5vh;
-    background-color: #2766C2;
+  height: 5vh;
+  background-color: #2766c2;
 }
 
 .side-bar {
-    width: 20vw;
-    min-height: 95vh;
-    background-color: #2b7def;
+  width: 20vw;
+  min-height: 95vh;
+  background-color: #2b7def;
 }
 
 .link {
-    display: block;
-    width: 80%;
-    margin-top: 3rem;
+  display: block;
+  width: 80%;
+  margin-top: 3rem;
 }
 
 .link:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .orange {
-    color: white;
-    background-color: orange;
-    border-color: orange;
+  color: white;
+  background-color: orange;
+  border-color: orange;
 }

@@ -22,7 +22,7 @@ A todo list app built with javascript
 
 ## Live Demo
 
-- [Todo App](https://rawcdn.githack.com/ershadul1/todo-list/8720a4958cd3b2759795e7f58ebdf18b77ce8f83/dist/index.html)
+- [Todo App](https://rawcdn.githack.com/ershadul1/todo-list/c08dca5f1e1de53c07c3679eddaff10f9f09780a/dist/index.html)
 
 ## How to run this project on your local machine
 
