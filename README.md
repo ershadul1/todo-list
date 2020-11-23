@@ -12,7 +12,7 @@ A todo list app built with javascript
 
 ## Screenshot
 
-![](./src/assets/screenshot.png)
+![](./src/screenshot/todo.png)
 
 ## Built With
 
