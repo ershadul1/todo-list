@@ -1,18 +1,18 @@
 import removeElement from '../modules/helpers/remove-element';
 
 test('Removes element from DOM', () => {
-    const newDiv = document.createElement('div');
-    newDiv.setAttribute('id', 'new-div');
-    
-    const divText = document.createElement('p');
-    divText.textContent += 'Child node';
+  const newDiv = document.createElement('div');
+  newDiv.setAttribute('id', 'new-div');
 
-    newDiv.appendChild(divText);
-    document.body.appendChild(newDiv);
+  const divText = document.createElement('p');
+  divText.textContent += 'Child node';
 
-    removeElement('new-div');
+  newDiv.appendChild(divText);
+  document.body.appendChild(newDiv);
 
-    const gettingNewDiv = document.querySelector('#new-div');
+  removeElement('new-div');
 
-    expect(gettingNewDiv.lastElementChild).toBeNull()
-})
+  const gettingNewDiv = document.querySelector('#new-div');
+
+  expect(gettingNewDiv.lastElementChild).toBeNull();
+});

@@ -6,7 +6,9 @@ test('Creates a new project', () => {
   const dueDate = '12/03/20';
   const taskList = [];
   const projectList = [];
-  const newProject = {title: title, description: description, dueDate: dueDate, taskList: taskList};
+  const newProject = {
+    title, description, dueDate, taskList,
+  };
 
   expect(createNewProject(title, description, dueDate, projectList)).toEqual([newProject]);
-})
+});
