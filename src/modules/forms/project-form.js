@@ -1,4 +1,4 @@
-import projects from '../objects/create-new-project';
+import { projects } from '../objects/create-new-project';
 
 const form = () => {
   const formContainer = document.createElement('div');

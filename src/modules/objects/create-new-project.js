@@ -10,9 +10,9 @@ const projects = () => {
   const description = document.getElementById('project-description').value;
   const dueDate = document.getElementById('project-dueDate').value;
 
-  const newProject = new Project(title, description, dueDate);
-  const projectList = getProjectList();
-  projectList.push(newProject);
+  let projectList = getProjectList();
+  projectList = createNewProject(title, description, dueDate, projectList); 
+
   const newProjectIndex = projectList.length - 1;
 
   saveToLocalStorage(projectList);
@@ -24,4 +24,14 @@ const projects = () => {
   activeProject(newProjectIndex);
 };
 
-export default projects;
+const createNewProject = (title, description, dueDate, projectList) => {
+  const newProject = new Project(title, description, dueDate);
+  
+  let projectListClone = [...projectList];
+
+  projectListClone.push(newProject);
+
+  return projectListClone;
+}
+
+export { projects, createNewProject };
