@@ -1,6 +1,6 @@
-import taskForm from '../modules/forms/project-form';
+import taskForm from '../modules/forms/task-form';
 
-test('Creates and append project form', () => {
+test('Creates and append task form', () => {
   document.body.innerHTML = `
     <div id='container'>
       <div id='secondary-container'>
@@ -11,5 +11,5 @@ test('Creates and append project form', () => {
 
   taskForm();
   const formContainer = document.querySelectorAll('.form-container');
-  expect(formContainer).not.toBeNull();
+  expect(formContainer.length).toBe(1);
 });
